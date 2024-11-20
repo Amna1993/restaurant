@@ -9,7 +9,7 @@ const Header = () => {
           <ul className="flex space-x-6">
             <li className="hover:text-secondary cursor-pointer">Home</li>
             <li className="hover:text-secondary cursor-pointer">Menu</li>
-            <li className="hover:text-secondary cursor-pointer">Gallery</li>
+            <li className="hover:text-secondary cursor-pointer">Our Story</li>
             <li className="hover:text-secondary cursor-pointer">Contact</li>
           </ul>
         </nav>
