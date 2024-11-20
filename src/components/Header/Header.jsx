@@ -1,19 +1,46 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="sticky top-0 bg-white shadow-md z-50">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-        <h1 className="text-2xl font-bold text-primary">Restaurant</h1>
-        <nav>
-          <ul className="flex space-x-6">
-            <li className="hover:text-secondary cursor-pointer">Home</li>
-            <li className="hover:text-secondary cursor-pointer">Menu</li>
-            <li className="hover:text-secondary cursor-pointer">Our Story</li>
-            <li className="hover:text-secondary cursor-pointer">Contact</li>
-          </ul>
-        </nav>
-      </div>
+    <header className="bg-gradient-to-b from-red-900 to-black py-4 fixed w-full z-50 shadow-lg">
+      <nav className="max-w-7xl mx-auto flex justify-between items-center px-4">
+        <h1 className="text-2xl font-bold text-white">Restaurant</h1>
+        <ul className="flex space-x-6">
+          <li>
+            <Link
+              to="/"
+              className="text-white hover:text-red-500 transition duration-300"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/menu"
+              className="text-white hover:text-red-500 transition duration-300"
+            >
+              Menu
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/reservation"
+              className="text-white hover:text-red-500 transition duration-300"
+            >
+              Reservation
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/contact"
+              className="text-white hover:text-red-500 transition duration-300"
+            >
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
