@@ -27,9 +27,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-gradient-to-r from-red-500 to-black-500 text-white py-16 m-40 rounded">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <h2 className="text-4xl font-bold text-center mb-12">
+    <section className="bg-gradient-to-r from-red-500 to-black text-white py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
           Get in <span className="text-yellow-300">Touch</span>
         </h2>
 
@@ -72,7 +72,7 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold text-gray-800 mb-6">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6">
               Send us a Message
             </h3>
 

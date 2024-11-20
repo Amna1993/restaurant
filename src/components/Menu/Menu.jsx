@@ -6,6 +6,7 @@ import image3 from "../../assets/gallery/image3.jpg";
 import image4 from "../../assets/gallery/image4.jpg";
 import image5 from "../../assets/gallery/image5.jpg";
 import image6 from "../../assets/gallery/image6.jpg";
+
 const galleryItems = [
   { id: 1, name: "Grilled Chicken", price: "$32.99", image: image1 },
   { id: 2, name: "Pasta Primavera", price: "$10.99", image: image2 },
@@ -42,10 +43,10 @@ const Gallery = () => {
   };
 
   return (
-    <section className="py-16 bg-gray-100 m-40">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-16 bg-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl font-bold text-center mb-8">Food</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {currentItems.map((item) => (
             <motion.div
               key={item.id}
@@ -58,7 +59,7 @@ const Gallery = () => {
               <img
                 src={item.image}
                 alt={item.name}
-                className="w-full h-48 object-cover"
+                className="w-full h-full object-cover aspect-square"
               />
               <div className="p-4 text-center">
                 <h3 className="text-lg font-bold">{item.name}</h3>
@@ -73,20 +74,22 @@ const Gallery = () => {
           <button
             onClick={handlePrevious}
             disabled={currentPage === 1}
-            className={`px-4 py-2 rounded-l bg-primary text-white ${
-              currentPage === 1 ? "opacity-50 cursor-not-allowed" : ""
+            className={`px-4 py-2 rounded-l bg-red-600 text-white ${
+              currentPage === 1 ? "opacity-50 cursor-not-allowed" : "hover:bg-red-700"
             }`}
           >
             Back
           </button>
           <span className="px-4 py-2 bg-gray-200 text-gray-700">
-             {currentPage} of {totalPages}
+            Page {currentPage} of {totalPages}
           </span>
           <button
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            className={`px-4 py-2 rounded-r bg-primary text-white ${
-              currentPage === totalPages ? "opacity-50 cursor-not-allowed" : ""
+            className={`px-4 py-2 rounded-r bg-red-600 text-white ${
+              currentPage === totalPages
+                ? "opacity-50 cursor-not-allowed"
+                : "hover:bg-red-700"
             }`}
           >
             Next
