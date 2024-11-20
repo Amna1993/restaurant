@@ -13,6 +13,8 @@ const galleryItems = [
   { id: 4, name: "Margherita Pizza", price: "$14.99", image: image4 },
   { id: 5, name: "Chocolate Cake", price: "$6.99", image: image5 },
   { id: 6, name: "Tiramisu", price: "$7.99", image: image6 },
+  { id: 7, name: "Tiramisu", price: "$7.99", image: image1 },
+  { id: 8, name: "Tiramisu", price: "$7.99", image: image2 },
   // Add more items if needed
 ];
 
@@ -42,7 +44,7 @@ const Gallery = () => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Gallery</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Food</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {currentItems.map((item) => (
             <motion.div
